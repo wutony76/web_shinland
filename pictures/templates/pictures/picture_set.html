@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+	$(function(){
+		$('.set-pic').click(function(){	
+			var url = $(this).attr('url');
+			var value = $(this).attr('val');
+			$("#{{ widget_name }} .widget-picture").html(
+				'<img src="' + url + '?w=256&h=256" />'
+			);
+			$("#{{ widget_name }} input").val(value);
+			$("#{{ widget_name }} .widget-picture").html(
+				'<img src="' + url + '?w=256&h=256" />'
+			);
+			$("#{{ widget_name }} .remove").show();
+			$.facebox.close();
+		});
+	});
+	</script>
+</head>
+<body>
+<div style="width: 480px; height: 320px;">
+	
+	{% for pic in pictures %}
+	<div>{% url pictures:picture pic.id as url %}
+		<img class="set-pic" val="{{ pic.id }}" url="{{ url }}" src="{{ url }}?w=100&h=100"/>
+	</div>
+	{% endfor %}
+</div>	
+</body>
+</html>

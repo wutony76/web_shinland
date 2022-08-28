@@ -1,0 +1,41 @@
+{% load i18n %}
+
+{% url home as home_url %}	
+
+{% if user.is_authenticated %}
+	<ul class="uset-tools">	
+		{% if user.is_staff %}
+		<li><a href="{% url admin:index %}">{% trans 'Admin' %}</a></li>
+		{% endif %}		
+		<li><a href="{% url auth_logout %}">{% trans 'Sign out' %}</a></li>		
+	</ul>
+{% else %}
+	<a class="sign-up" href="{% url auth_signup %}">{% trans 'Sign up' %}</a>	
+	<div class="login-box">
+	<form action="{% url auth_login %}" method="post">
+		{% csrf_token %}
+		<div class="inputs">
+			<div>
+				<label>{% trans 'Username' %}:</label>
+				<input type="text" name="username" />
+			</div>
+			<div>
+				<label>{% trans 'Password' %}:</label>
+				<input type="password" name="password" />
+			</div>
+		</div>
+		<div class="buttons">
+			<div>
+			<input type="submit" value="{% trans 'Sign in' %}" />
+			</div>
+			<a href="">{% trans 'forget password' %}?</a>
+		</div>				
+		
+	</form>
+	</div>
+{% endif %}	
+	
+
+	
+
+	

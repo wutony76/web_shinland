@@ -1,0 +1,176 @@
+
+#changelist {
+	position: relative;
+	width: 100%;
+}
+
+/* FILTER COLUMN */
+
+#changelist-filter {
+	z-index: 1000;
+	background: #eee;
+	margin: 0;
+	font-size: 10pt;
+}
+
+#changelist-filter .filter-group {
+	display: inline-block;
+	*display: inline;
+	padding: .5em 1em;
+}
+
+#changelist-filter h2 {
+	font-size: 10pt;
+}
+
+#changelist-filter h3 {
+	font-size: 10pt;
+}
+
+#changelist-filter ul {
+	
+}
+
+#changelist-filter li {
+	list-style: none;
+}
+
+#changelist-filter a {
+    color: #666;
+}
+
+#changelist-filter a:hover {
+    color: #000;
+}
+
+#changelist-filter li.selected {
+	color: #000;
+	font-weight: bold;
+}
+
+#changelist-filter li.selected a {
+    color: #5b80b2 !important;
+}
+
+button.toggle-filters {
+	padding: 5px 16px;
+	display: block;
+	border: 1px solid #eee;
+	background: #f4f4f4;
+	-moz-border-radius-: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+
+/* CHANGELIST TABLES */
+
+#changelist table {
+	width: 100%;
+	font-size: 15px;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+#changelist table tr {
+	border-bottom: 1px solid #ddd;
+}
+
+#changelist table thead th {
+	white-space: nowrap;
+	vertical-align: middle;
+}
+
+#changelist table thead th.action-checkbox-column {
+	width: 1.5em;
+	text-align: center;
+}
+
+#changelist table tbody td, #changelist table tbody th {
+	border-left: 1px solid #ddd;
+	padding: 5px 3px;
+}
+
+#changelist table tbody td:first-child, #changelist table tbody th:first-child {
+	border-left: 0;
+	border-right: 1px solid #ddd;
+}
+
+#changelist table tbody td.action-checkbox {
+	text-align:center;
+}
+
+#changelist table tfoot {
+	color: #666;
+}
+
+#changelist table .row2 {
+	background: rgba(240, 240, 240, .8);
+}
+
+
+#changelist table a {
+	text-decoration: none;
+}
+
+#changelist input[type="checkbox"] {
+}
+/**/
+#changelist-search {
+	
+}
+
+#changelist-search input[type="text"] {
+	width: 250px;
+	padding: .4em .6em;
+	border: 1px solid #ccc;
+	font-size: 1em;
+	display: inline-block;
+}
+
+#changelist-search input[type="submit"] {
+	width: 100px;
+}
+
+#tools .actions {
+	font-size: 15px;
+	/*height: 40px;
+	border: 1px solid #000;*/
+	float: left;
+	padding-right: 10px;
+}
+
+#tools .actions label {
+	float: left;
+	width: auto;
+}
+
+#tools .actions select {
+	border: 1px solid #999;
+	padding: 5px;
+	-moz-border-radius-: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;	
+}
+
+#tools .actions select:hover, #changelist .actions select:focus {
+	border: 1px solid #6699ff;
+}
+
+.actions button {
+	border: 1px solid #ccc;
+	padding: 5px 20px;
+	-moz-border-radius-: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.actions button:hover {
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05) inset;
+	border: 1px solid #6699ff;
+}
+
+
+
+
+

@@ -1,0 +1,504 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-01-07 16:05+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#: .\about\models.py:15 .\news\templates\news\index.html.py:54
+msgid "category"
+msgstr ""
+
+#: .\about\models.py:17 .\news\models.py:18
+#: .\news\templates\news\index.html.py:55
+msgid "title"
+msgstr ""
+
+#: .\about\models.py:18
+msgid "content"
+msgstr ""
+
+#: .\about\models.py:19
+msgid "image"
+msgstr ""
+
+#: .\about\templates\about\change_form.html.py:31
+#: .\admin\templates\admin\base.html.py:25
+#: .\admin\templates\admin\base.html.py:54
+#: .\admin\templates\admin\change_form.html.py:19
+#: .\admin\templates\admin\change_list.html.py:59
+#: .\templates\base_site.html.py:19
+msgid "Home"
+msgstr "首頁"
+
+#: .\about\templates\about\change_form.html.py:34
+#: .\admin\templates\admin\change_form.html.py:22
+msgid "Add"
+msgstr ""
+
+#: .\about\templates\about\change_form.html.py:44
+#: .\admin\templates\admin\change_form.html.py:32
+msgid "History"
+msgstr ""
+
+#: .\about\templates\about\change_form.html.py:45
+#: .\admin\templates\admin\change_form.html.py:33
+msgid "View on site"
+msgstr ""
+
+#: .\about\templates\about\change_form.html.py:61
+#: .\account\templates\registration\password_change_form.html.py:11
+#: .\admin\templates\admin\change_form.html.py:49
+#: .\admin\templates\admin\change_list.html.py:101
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] ""
+
+#: .\about\templates\about\index.html.py:14
+msgid "feature"
+msgstr ""
+
+#: .\about\templates\about\index.html.py:15
+msgid "environment"
+msgstr ""
+
+#: .\about\templates\about\index.html.py:16
+msgid "traffic"
+msgstr ""
+
+#: .\account\forms.py:8
+msgid "remember"
+msgstr ""
+
+#: .\account\forms.py:11
+msgid "username"
+msgstr ""
+
+#: .\account\forms.py:12
+msgid "email"
+msgstr ""
+
+#: .\account\forms.py:13
+msgid "password"
+msgstr ""
+
+#: .\account\forms.py:14
+msgid "Confirm your password"
+msgstr ""
+
+#: .\account\forms.py:22
+msgid "This username is illegal."
+msgstr ""
+
+#: .\account\forms.py:29
+msgid "A user with that username already exists."
+msgstr ""
+
+#: .\account\forms.py:35
+msgid "The two password fields didn't match."
+msgstr ""
+
+#: .\account\templates\account\index.html.py:14
+msgid "Profile"
+msgstr "個人檔案"
+
+#: .\account\templates\account\index.html.py:17
+msgid "edit your personal info"
+msgstr ""
+
+#: .\account\templates\account\index.html.py:23
+msgid "Settings"
+msgstr ""
+
+#: .\account\templates\account\index.html.py:25 .\templates\navbar.html.py:23
+msgid "Password"
+msgstr ""
+
+#: .\account\templates\account\index.html.py:26
+msgid "Changeing your password"
+msgstr ""
+
+#: .\account\templates\account\index.html.py:29
+msgid "Eamil address"
+msgstr ""
+
+#: .\account\templates\account\index.html.py:30
+msgid "Edit"
+msgstr ""
+
+#: .\account\templates\registration\login.html.py:15
+#: .\account\templates\registration\login.html.py:40
+#: .\admin\templates\admin\base.html.py:31
+#: .\news\templates\news\index.html.py:31 .\templates\navbar.html.py:29
+msgid "Sign in"
+msgstr "登入"
+
+#: .\account\templates\registration\login.html.py:34
+msgid "The username or password you entered is incorrect."
+msgstr ""
+
+#: .\account\templates\registration\login.html.py:46
+msgid "Can't access your account?"
+msgstr ""
+
+#: .\account\templates\registration\login.html.py:55
+#, fuzzy
+msgid "Accounts"
+msgstr "帳戶"
+
+#: .\account\templates\registration\login.html.py:57
+msgid "Sign in on the right or"
+msgstr ""
+
+#: .\account\templates\registration\login.html.py:58
+msgid "create an account."
+msgstr ""
+
+#: .\account\templates\registration\password_change_form.html.py:15
+msgid "Password change"
+msgstr ""
+
+#: .\account\templates\registration\password_change_form.html.py:17
+msgid ""
+"Please enter your old password, for security's sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
+msgstr ""
+
+#: .\account\templates\registration\password_change_form.html.py:23
+msgid "Old password"
+msgstr ""
+
+#: .\account\templates\registration\password_change_form.html.py:28
+msgid "New password"
+msgstr ""
+
+#: .\account\templates\registration\password_change_form.html.py:33
+msgid "Password (again)"
+msgstr ""
+
+#: .\account\templates\registration\password_change_form.html.py:39
+msgid "Change my password"
+msgstr ""
+
+#: .\account\templates\registration\signup.html.py:14
+msgid "Create a new Account"
+msgstr ""
+
+#: .\account\templates\registration\signup.html.py:27
+#, fuzzy
+msgid "Sing up"
+msgstr "登出"
+
+#: .\admin\templates\admin\base.html.py:29 .\templates\navbar.html.py:10
+msgid "Sign out"
+msgstr "登出"
+
+#: .\admin\templates\admin\base_site.html.py:4
+#: .\admin\templates\admin\base_site.html.py:7 .\templates\base_site.html.py:5
+#: .\templates\base_site.html.py:9 .\templates\base_site.html.py:31
+msgid "Shinland Nursery"
+msgstr "欣倫幼兒園"
+
+#: .\admin\templates\admin\base_site.html.py:4
+#: .\admin\templates\admin\base_site.html.py:7
+msgid "administration"
+msgstr ""
+
+#: .\admin\templates\admin\change_list.html.py:80
+#, python-format
+msgid "Add %(name)s"
+msgstr ""
+
+#: .\admin\templates\admin\index.html.py:16
+msgid "You don't have permission to edit anything."
+msgstr ""
+
+#: .\admin\templates\admin\index.html.py:24
+msgid "Recent Actions"
+msgstr ""
+
+#: .\admin\templates\admin\index.html.py:25
+msgid "My Actions"
+msgstr ""
+
+#: .\admin\templates\admin\index.html.py:29
+msgid "None available"
+msgstr ""
+
+#: .\admin\templates\admin\index.html.py:43
+msgid "Unknown content"
+msgstr ""
+
+#: .\admin\templates\admin\menu.html.py:6
+msgid "auth"
+msgstr "會員管理"
+
+#: .\admin\templates\admin\menu.html.py:8
+msgid "Users"
+msgstr "帳號"
+
+#: .\admin\templates\admin\menu.html.py:10
+msgid "Groups"
+msgstr ""
+
+#: .\admin\templates\admin\menu.html.py:13
+#, fuzzy
+msgid "Profiles"
+msgstr "個人檔案"
+
+#: .\admin\templates\admin\menu.html.py:19
+msgid "Pages"
+msgstr "頁面管理"
+
+#: .\admin\templates\admin\menu.html.py:22
+#: .\news\templates\news\index.html.py:9
+msgid "News"
+msgstr "最新消息"
+
+#: .\admin\templates\admin\menu.html.py:25 .\templates\base_site.html.py:20
+msgid "About"
+msgstr "關於欣倫"
+
+#: .\admin\templates\admin\menu.html.py:28
+#: .\album\templates\album\index.html.py:17
+#: .\album\templates\album\photolist.html.py:19
+#, fuzzy
+msgid "Album"
+msgstr "關於欣倫"
+
+#: .\admin\templates\admin\menu.html.py:32
+msgid "Pictures"
+msgstr "圖片"
+
+#: .\admin\templates\admin\menu.html.py:36
+msgid "Download"
+msgstr "檔案下載"
+
+#: .\admin\templates\admin\menu.html.py:37
+msgid "Article"
+msgstr "文章"
+
+#: .\admin\templates\admin\menu.html.py:38
+msgid "Article Category"
+msgstr "文章分類"
+
+#: .\admin\templates\admin\search_form.html.py:10
+msgid "Search"
+msgstr ""
+
+#: .\admin\templates\admin\search_form.html.py:12
+#, python-format
+msgid "%(counter)s result"
+msgid_plural "%(counter)s results"
+msgstr[0] ""
+
+#: .\admin\templates\admin\search_form.html.py:12
+#, python-format
+msgid "%(full_result_count)s total"
+msgstr ""
+
+#: .\album\models.py:10
+msgid "name"
+msgstr "名稱"
+
+#: .\album\models.py:14 .\album\models.py:33
+msgid "description"
+msgstr "說明"
+
+#: .\album\templates\album\index.html.py:23
+#: .\album\templates\album\photolist.html.py:18
+msgid "Photo"
+msgstr ""
+
+#: .\album\templates\album\index.html.py:36
+msgid "search"
+msgstr ""
+
+#: .\album\templates\album\photo_inline.html.py:49
+msgid "Delete?"
+msgstr ""
+
+#: .\album\templates\album\photo_inline.html.py:123
+#, python-format
+msgid "Add another %(verbose_name)s"
+msgstr ""
+
+#: .\album\templates\album\photo_inline.html.py:126
+#, fuzzy
+msgid "Remove"
+msgstr "課程介紹"
+
+#: .\language\forms.py:5
+msgid "Traditional Chinese"
+msgstr ""
+
+#: .\language\forms.py:6
+msgid "English"
+msgstr ""
+
+#: .\language\forms.py:12
+msgid "Language"
+msgstr ""
+
+#: .\news\admin.py:11
+msgid "choice media"
+msgstr ""
+
+#: .\news\models.py:17
+msgid "top"
+msgstr "置頂"
+
+#: .\news\models.py:19
+msgid "body"
+msgstr "內文"
+
+#: .\news\models.py:20
+msgid "publish date"
+msgstr "發佈日期"
+
+#: .\news\templates\news\index.html.py:14 .\templates\home.html.py:22
+msgid "NEWS"
+msgstr "最新消息"
+
+#: .\news\templates\news\index.html.py:53
+msgid "date"
+msgstr "日期"
+
+#: .\pagination\templates\pagination\pagination.html.py:5
+#: .\pagination\templates\pagination\pagination.html.py:7
+msgid "previous"
+msgstr "上一頁"
+
+#: .\pagination\templates\pagination\pagination.html.py:21
+#: .\pagination\templates\pagination\pagination.html.py:23
+msgid "next"
+msgstr "下一頁"
+
+#: .\pictures\admin.py:35
+msgid "related pictures"
+msgstr "相關的圖片"
+
+#: .\profiles\models.py:16
+msgid "Male"
+msgstr "男"
+
+#: .\profiles\models.py:17
+msgid "Female"
+msgstr "女"
+
+#: .\profiles\models.py:21
+msgid "nickname"
+msgstr "暱稱"
+
+#: .\profiles\models.py:22
+msgid "gender"
+msgstr "性別"
+
+#: .\profiles\models.py:23
+msgid "birthday"
+msgstr "生日"
+
+#: .\profiles\models.py:24
+msgid "website"
+msgstr ""
+
+#: .\profiles\models.py:25
+msgid "photo"
+msgstr "圖片"
+
+#: .\profiles\models.py:26
+#, fuzzy
+msgid "about"
+msgstr "關於欣倫"
+
+#: .\profiles\models.py:30
+#, fuzzy
+msgid "profile"
+msgstr "個人檔案"
+
+#: .\profiles\templates\profiles\profile_change.html.py:15
+msgid "upload your photo"
+msgstr "上載你的圖片"
+
+#: .\profiles\templates\profiles\profile_change.html.py:33
+msgid "Save"
+msgstr "儲存"
+
+#: .\profiles\templates\profiles\upload_photo.html.py:24
+msgid "Upload"
+msgstr "上載"
+
+#: .\share\templates\share\index.html.py:16
+msgid "download"
+msgstr "檔案下載"
+
+#: .\templates\base_site.html.py:21
+msgid "Course"
+msgstr "課程介紹"
+
+#: .\templates\base_site.html.py:22
+msgid "Parent&Child"
+msgstr ""
+
+#: .\templates\base_site.html.py:23
+msgid "Contact Us"
+msgstr "聯絡我們"
+
+#: .\templates\home.html.py:26
+msgid "Activity"
+msgstr ""
+
+#: .\templates\home.html.py:27
+#, fuzzy
+msgid "more"
+msgstr ""
+
+#: .\templates\navbar.html.py:8
+msgid "Admin"
+msgstr "管理"
+
+#: .\templates\navbar.html.py:13
+#, fuzzy
+msgid "Sign up"
+msgstr "登出"
+
+#: .\templates\navbar.html.py:19
+msgid "Username"
+msgstr "帳號"
+
+#: .\templates\navbar.html.py:31
+msgid "forget password"
+msgstr "忘記密碼"
+
+#, fuzzy
+#~ msgid "course"
+#~ msgstr "課程介紹"
+
+#, fuzzy
+#~ msgid "Contact us"
+#~ msgstr "聯絡我們"
+
+#~ msgid "note_next.png"
+#~ msgstr "note_next_zhtw.png"
+
+#~ msgid "note_prev.png"
+#~ msgstr "note_prev_zhtw.png"
+
+#, fuzzy
+#~ msgid "Shinland Home"
+#~ msgstr "欣倫首頁"
+
+#~ msgid "Sitemap"
+#~ msgstr "網站地圖"

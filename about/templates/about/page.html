@@ -1,0 +1,20 @@
+{% extends "base_site.html" %}
+
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/about.css" />
+{% endblock%}
+
+
+{% block content %}
+<div class="content-main">
+<h2>{{ about.title }}</h2>
+<div>{{ about.body|safe }}</div>
+
+<div>
+	{% for picset in pic_sets %}
+	<img src="{% url pictures:picture picset.id %}"/>
+	{% endfor %}
+</div>
+</div>
+{% endblock %}

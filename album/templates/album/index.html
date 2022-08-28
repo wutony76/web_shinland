@@ -1,0 +1,43 @@
+{% extends "home.html" %}
+
+{% load i18n pagination_tags %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/album.css" />
+{% endblock%}
+
+{% block bodyclass %}album{% endblock %}
+
+
+{% block main %}
+<div id="sidebar">
+	<h1>catgory</h1>
+	<ul>
+		<li><a href="{% url album:index %}" class="content-title">{% trans 'Album' %}</a></li>
+	</ul>
+</div>
+{% autopaginate albums 15 %}
+<div id="content-main">
+
+	<h2>{% trans 'Photo' %}</h2>
+	<h1>photo</h1>
+	<div>
+		{% for album in albums %}
+		<div class="album-post">
+			<div class="post"><a href="{% url album:photo_list album.id %}"><img src="{{ album.cover_url }}"/></a></div>
+			<div class="com"><li>{{ album.name }}</li></div>
+		</div>
+		{% endfor %}
+	</div>
+	
+	<div class="searchbox">
+		{% paginate %}
+		<input type="text" name="search"  id="id_search"/>
+		<input type="submit" value="{% trans 'search' %}" /><label for="id_search">請輸入欲搜尋的文字內容</label>		
+	</div>
+</div>
+{% endblock %}
+
+{% block extrahead %}
+
+{% endblock %}

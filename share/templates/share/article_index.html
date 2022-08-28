@@ -1,0 +1,35 @@
+{% extends "share/index.html" %}
+
+{% load i18n pagination_tags %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/share.css" />
+{% endblock%}
+
+{% block bodyclass %}article{% endblock %}
+
+{% block content-main %}
+
+	<h1>親職分享</h1>
+	<p class="intro">
+	家長可透過即時影像傳輸功能，了解寶貝在學校的生活點滴。遇戶外教學日上午不開放視訊喔！聯絡電話：(02) 2701-3880</p>
+	
+	
+	<div class="categories">
+		{% for category, articles in categories %}
+		<div class="article-group">
+		<h3>{{ category.name }}</h3>
+		<ul>			
+			{% for article in articles %}
+			<li><a href="">{{ article.title }}</a> </li>
+			{% endfor %}			
+		</ul>
+		</div>
+		{% endfor %}
+	</div>
+	
+
+{% endblock %}
+
+
+

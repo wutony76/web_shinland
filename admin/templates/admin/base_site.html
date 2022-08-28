@@ -1,0 +1,16 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+
+{% block title %}{{ title }} | {% trans 'Shinland Nursery' %}{% trans 'administration' %}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">{% trans 'Shinland Nursery' %}{% trans 'administration' %}</h1>
+{% endblock %}
+
+{% block nav-global %}
+{% endblock %}
+
+{% block menu %}{% include 'admin/menu.html' %}{% endblock %}
+
+{% block tools %}
+{% endblock %}

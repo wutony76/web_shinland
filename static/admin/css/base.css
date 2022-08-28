@@ -1,0 +1,219 @@
+@import url('../../forms.css');
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+#header {
+	height: 60px;
+	background: #f4f4f4;
+	border-bottom: 1px solid #ccc;
+}
+
+#branding {
+	padding: 16px;
+	float: left;
+
+}
+
+#site-name {
+	font-size: 20px;
+}
+
+#tools {
+	height: 30px;
+	border-bottom: 1px solid #ddd;
+	padding: 16px;
+}
+
+#tools h1 {
+	font-size: 13px;
+	float: left;
+	width: 200px;
+}
+/* NAVBAR */
+
+#navbar {
+	height: 30px;
+	color: #fff;
+	background: #000;
+}
+
+#navbar a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#navbar .usertools {
+	float: right;
+	list-style: none;
+}
+
+#navbar .usertools li {
+	float: left;
+}
+
+#navbar .usertools li a,
+#navbar .links li a {
+	display: block;
+	padding: 8px 16px;
+}
+
+#navbar .usertools li a:hover {
+	background: rgba(102, 102, 102, .8);
+}
+
+#navbar .links {
+	float: left;
+}
+
+/* */
+.module {
+
+}
+
+fieldset.module {
+	border: 0 none;
+}
+
+.breadcrumbs {
+	padding: 5px;
+}
+
+/* OBJECT TOOLS */
+
+.object-tools {
+	/*border: 1px solid #ff0000;*/
+	height: 30px;
+	margin: 0;
+	list-style: none;
+	float: left;
+}
+
+.object-tools li {
+	float: left;
+}
+
+.object-tools a.addlink, .object-tools a.historylink {
+	padding: 8px 20px;
+	display: block;
+	background: #f4f4f4;
+	border: 1px solid #ccc;
+	text-decoration: none;
+	color: #333;
+	font-weight: bold;
+
+	-moz-border-radius-: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	
+}
+
+.object-tools a.addlink:hover, .object-tools a.historylink {
+	color: #000;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05) inset;
+	border: 1px solid #6699ff;
+}
+
+* MESSAGES & ERRORS */
+
+ul.messagelist {
+    padding: 0 0 5px 0;
+    margin: 0;
+}
+
+ul.messagelist li {
+    font-size: 12px;
+    display: block;
+    padding: 4px 5px 4px 25px;
+    margin: 0 0 3px 0;
+    border-bottom: 1px solid #ddd;
+    color: #666;
+    background: #ffc url(../img/admin/icon_success.gif) 5px .3em no-repeat;
+}
+
+ul.messagelist li.warning{
+    background-image: url(../img/admin/icon_alert.gif);
+}
+
+ul.messagelist li.error{
+    background-image: url(../img/admin/icon_error.gif);
+}
+
+.errornote {
+    font-size: 12px !important;
+    display: block;
+    padding: 4px 5px 4px 25px;
+    margin: 0 0 3px 0;
+    border: 1px solid red;
+    color: red;
+    background: #ffc url(../img/admin/icon_error.gif) 5px .3em no-repeat;
+}
+
+ul.errorlist {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.errorlist li {
+    font-size: 12px !important;
+    display: block;
+    padding: 4px 5px 4px 25px;
+    margin: 0 0 3px 0;
+    border: 1px solid red;
+    color: white;
+    background: red url(../img/admin/icon_alert.gif) 5px .3em no-repeat;
+}
+
+.errorlist li a {
+ 	color: white;
+    text-decoration: underline;
+}
+
+td ul.errorlist {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+td ul.errorlist li {
+    margin: 0 !important;
+}
+
+.errors {
+    background: #ffc;
+}
+
+.errors input, .errors select, .errors textarea {
+    border: 1px solid red;
+}
+
+div.system-message {
+    background: #ffc;
+    margin: 10px;
+    padding: 6px 8px;
+    font-size: .8em;
+}
+
+div.system-message p.system-message-title {
+    padding: 4px 5px 4px 25px;
+    margin: 0;
+    color: red;
+    background: #ffc url(../img/admin/icon_error.gif) 5px .3em no-repeat;
+}
+
+.description {
+    font-size: 12px;
+    padding: 5px 0 0 12px;
+}
+/* FORMS */
+form input[type="submit"] {
+	height: 32px;	
+	background: #4D90FE;
+	border: 1px solid #336699;
+	color: #fff;
+	font-weight: bold;
+	-moz-border-radius-: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}

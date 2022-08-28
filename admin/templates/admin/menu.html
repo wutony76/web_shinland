@@ -1,0 +1,48 @@
+{% load i18n %}
+
+<div id="menu">
+	{{ .change_about }}
+	<div>
+		<h3>{% trans 'auth' %}</h3>
+		<ul>
+			<li><a href="{% url admin:auth_user_changelist %}">{% trans 'Users' %}</a></li>
+			{% if perms.auth.group %}
+			<li><a href="{% url admin:auth_group_changelist %}">{% trans 'Groups' %}</a></li>
+			{% endif %}
+			{% if perms.profiles %}
+			<li><a href="{% url admin:profiles_profile_changelist %}">{% trans 'Profiles' %}</a></li>
+			{% endif %}
+		</ul>		
+	</div>
+	
+	<div>
+		<h3>{% trans 'Pages' %}</h3>
+		<ul>
+			{% if perms.news %}
+			<li><a href="{% url admin:news_news_changelist %}">{% trans 'News' %}</a></li>
+			{% endif %}
+			{% if perms.about %}
+			<li><a href="{% url admin:about_about_changelist %}">{% trans 'About' %}</a></li>
+			{% endif %}
+			{% if perms.album %}
+			<li><a href="{% url admin:album_album_changelist %}">{% trans 'Album' %}</a></li>
+			{% endif %}
+			
+			{% if perms.pictures %}
+			<li><a href="{% url admin:pictures_picture_changelist %}">{% trans 'Pictures' %}</a></li>
+			{% endif %}
+			
+			{% if perms.share %}
+			<li><a href="{% url admin:share_download_changelist %}">{% trans 'Download' %}</a></li>
+			<li><a href="{% url admin:share_article_changelist %}">{% trans 'Article' %}</a></li>
+			<li><a href="{% url admin:share_articlecategory_changelist %}">{% trans 'Article Category' %}</a></li>
+			{% endif %}
+			
+			
+			
+		</ul>	
+	</div>
+	
+	
+	
+</div>

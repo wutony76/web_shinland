@@ -1,0 +1,13 @@
+
+.img-post {
+	zoom: 1;
+	display: inline-block;
+	*display: inline;
+	vertical-align: top;
+	border: 1px solid #ccc;
+	padding: 3px;
+}
+
+.img-post:hover {
+	border: 1px solid #336699;
+}

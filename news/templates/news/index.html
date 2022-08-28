@@ -1,0 +1,69 @@
+{% extends "home.html" %}
+
+{% load i18n %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/news.css" />
+{% endblock%}
+
+{% block fieldset_legend %}<h1>{% trans 'News' %}</h1>{% endblock %}
+
+{% block main %}
+<div id="sidebar">			
+	<div id="latest-news">
+		<h2>{% trans 'NEWS' %}</h2>
+		{% for news in contacts %}
+		<li class="{% cycle 'row1' 'row2' %}">
+		<a href="{% url news:detail news.id %}">{{ news.title }}</a>
+		({{ news.category.name }})
+		<span class="date">{{ news.pub_date|date:'SHORT_DATE_FORMAT' }}</span>
+		</li>
+			{% endfor %}
+	</div>
+	<div id="news-search">
+		
+		<label><li>請輸入欲搜尋的文字內容</li></label>
+		<div class="inputs">
+			<input type="text" name="search"/>
+		</div>		
+		<div class="buttons">
+			<div>
+			<input type="submit" value="{% trans 'Sign in' %}" />
+			</div>
+		</div>	
+	</div>
+</div>
+<div id="content-main">
+	{% load pagination_tags %}{% autopaginate contacts 20 %}
+	{% paginate %}
+	<h1>最新消息</h1>
+</div>
+
+
+{% endblock %}
+
+{% block bodyclass %}news{% endblock %}
+
+
+<!--
+
+	<table>	
+		<thead>
+			<tr>
+				<td class="date">{% trans 'date' %}</td>
+				<td class="category">{% trans 'category' %}</td>
+				<td class="title">{% trans 'title' %}</td>			
+			</tr>
+		</thead>
+	{% for news in contacts %}
+	<tr class="{% cycle 'row1' 'row2' %}">
+		<td>{{ news.pub_date|date:'SHORT_DATE_FORMAT' }}</td>
+		<td>{{ news.category.name }}</td>
+		<td><a href="{% url news:detail news.id %}">{{ news.title }}</a></td>
+		
+	</tr>
+	{% endfor %}
+	</table>
+
+
+-->

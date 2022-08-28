@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% load static %}{% get_static_prefix as STATIC_URL %}
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}jwysiwyg/upload.css" />	
+	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.6.2.js"></script>
+</head>
+<body>
+
+{% for pic in pictures %}{% url pictures:picture pic.id as pic_url %}
+<div class="img-post"><img url="{{ pic_url }}" src="{{ pic_url }}?w=80&h=80"/> </div>
+{% endfor %}
+	
+</body>
+</html>
+

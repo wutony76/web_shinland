@@ -1,0 +1,22 @@
+{% extends "base_site.html" %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/guestbook.css"/>
+{% endblock %}
+
+{% block content %}
+<div class="content-main">
+
+
+<h2>訪客留言版</h2>
+{% for post in contacts.object_list %}
+<div>
+	{{ post.body }}
+	{{ post.pub_date|date:'Y.m.d' }}
+	
+</div>
+
+{% endfor %}
+
+</div>
+{% endblock %}

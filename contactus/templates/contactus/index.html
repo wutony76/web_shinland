@@ -1,0 +1,72 @@
+{% extends "base_site.html" %}
+
+{% load i18n %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/contactus.css" />
+
+{% endblock%}
+
+{% block bodyclass %}contactus{% endblock %}
+
+{% block content %}
+
+<ul class="content-menu">
+	<li><a class="button-email" href="{% url contactus:index %}">服務信箱</a> </li>
+	<li><a class="button-service" href="{% url contactus:index %}">線上客服</a> </li>
+</ul>
+<div id="content-main">	
+	
+	<div class="content-main-body">
+	
+	<h1>服務信箱&線上客服</h1>	
+	<p>孩子準備好要體驗這新奇有趣的團體生活了嗎？若有相關問題歡迎隨時與我們聯繫，我們會盡快與您聯絡~~ 讓我們大手牽小手共同陪伴他們面對未來的路程喔！</p>
+	<table>
+		<tr>
+			<td>
+				
+		<form action="" method="post">
+		<table>
+			<tr>
+				<th>標題</th>
+				<td>{{ form.title }}</td>
+			</tr>
+			<tr>
+				<th>信箱</th>
+				<td>{{ form.email }}</td>
+			</tr>
+			<tr>
+				<th>意見</th>
+				<td>{{ form.body }}</td>
+			</tr>
+			<tr>
+				<th></th>
+				<td>
+				<input id="buttaion" type="submit" value="送出" />
+				</td>
+			</tr>
+		</table>
+		</form>
+			</td>
+			<td>
+				<table id="msn">
+					<tr>
+						<td>
+							<iframe src="http://settings.messenger.live.com/conversation/IMMe.aspx?invitee=fbee973ec96362cc@apps.messenger.live.com&mkt=zh-TW&useTheme=true&themeName=pink&foreColor=444444&backColor=FFD5D5&linkColor=444444&borderColor=Ed7b7b&buttonForeColor=AA3636&buttonBackColor=FAD6D6&buttonBorderColor=AA3636&buttonDisabledColor=Fad6d6&headerForeColor=444444&headerBackColor=F9A3A3&menuForeColor=E45A5A&menuBackColor=FFFFFF&chatForeColor=444444&chatBackColor=FEF6F6&chatDisabledColor=F6F6F6&chatErrorColor=760502&chatLabelColor=6E6C6C" whidth="430" height="432" style="border:solid 1px black; width: 430px; height:432px;"frameborder="0" scrolling="no">
+						</iframe>
+						</td>
+					</tr>
+					<tr>
+						<td id="msn-body">
+							<p>請按「開始對話」開始傳送訊息，如果顯示「離線」或「忙錄」，表示值班客服，正忙於處理園所內的事務。敬請見諒，並凡心等候。或您也可以透過服務信箱，表達您的意見喔！欣倫幼兒園感謝您。</p>
+						</td>
+					</tr>
+				</table>
+			</td>
+		
+		
+	</table>
+	</div>
+</div>
+
+{% endblock %}

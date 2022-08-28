@@ -1,0 +1,51 @@
+{% extends "about/index.html" %}
+
+{% load i18n %}
+
+
+{% block extrastyle %}
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/jquery.lightbox-0.5.css" />
+{% endblock%}
+
+
+
+
+{% block bodyclass %}environ{% endblock %}
+
+
+{% block sidebar %}
+<div id="sidebar">
+
+	{{ about.body }}
+	<div id="pic" >
+		<img src="{{ STATIC_URL }}images/environ_pic.png"/>
+	</div>
+	
+</div>
+{% endblock %}
+
+{% block content-main %}
+<div id="content-main">
+
+	<div id="content-main-body">
+		<h1>環境介紹</h1>		
+	
+		{% for photo in photos %}
+		<div class="photo-post">
+			<a rel="lightbox" href="{% url album:photo photo.id %}"> <img src="{% url album:photo_thumb photo.id %}" /></a>
+		<div class="description">{{ photo.description }}</div>
+		</div>
+		{% endfor %}	
+	</div>
+</div>
+{% endblock %}
+
+{% block extrahead %}
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.lightbox-0.5.js"></script>
+<script type="text/javascript">
+$(function() {
+	$('a[rel*=lightbox]').lightBox({fixedNavigation:true});
+});
+</script>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "base_site.html" %}
+
+{% load i18n picture_tags %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/course.css" />
+
+{% endblock%}
+
+{% block bodyclass %}course{% endblock %}
+
+{% block content %}
+
+<ul class="content-menu">
+	<li><a class="button-course" href="{% url about:course %}">課程介紹</a> </li>
+	<li><a class="button-teacher" href="{% url about:teacher_list %}">師資陣容</a> </li>
+</ul>
+
+<div id="sidebar">
+	
+</div>
+<div id="content-main">
+	{% block content-main %}
+	<div class="content-main-body">
+	<h1>課程介紹</h1>
+	
+	<div class="course-content">
+		{% for about in abouts %}
+		<div class="course-post">	
+			<a href="{% url about:page about.id %}">
+				<img src="{% picture_url_by_obj about 'icon_book.png' %}?w=190&h=140"/>
+			
+			</a> 
+			<div class="course-description">{{ about.title }}</div>
+		</div>
+		{% endfor %}
+	</div>	
+	</div>
+	{% endblock %}
+</div>
+	
+{% endblock %}

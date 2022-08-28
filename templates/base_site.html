@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block title %}{% trans 'Shinland Nursery' %}{% endblock %}
+
+{% block branding %}
+{% url home as home_url %}	
+<a id="site-name" href="{{ home_url }}"><h1>{% trans 'Shinland Nursery' %}</h1></a>
+<a href="{{ home_url }}" class="branding-link"></a>
+{% endblock %}
+
+{% block nav-global %}	
+<div id="navbar">{% include 'navbar.html' %}</div>
+	
+
+<div id="menu">
+	<ul>
+		<li><a class="menu-home" href="{% url home %}"><strong>{% trans 'Home' %}</strong></a></li>
+		<li><a class="menu-about" href="{% url about:index %}"><strong>{% trans 'About' %}</strong></a></li>
+		<li><a class="menu-course" href="{% url about:course %}"><strong>{% trans 'Course' %}</strong></a></li>
+		<li><a class="menu-parentchild" href="{% url share:index %}"><strong>{% trans 'Parent&Child' %}</strong></a></li>
+		<li><a class="menu-contact" href="{% url contactus:index %}"><strong>{% trans 'Contact Us' %}</strong></a></li>
+	</ul>
+</div>
+{% endblock %}
+
+{% block footer %}
+	<div id="footer">
+		<div class="content">
+		Copyright&copy;2011 by <img src="{{ STATIC_URL }}images/icon_footer.png"/> {% trans 'Shinland Nursery' %}</a> All Right Reversed Web design by Bigplandesign.
+		</div>
+	</div>	
+{% endblock %}

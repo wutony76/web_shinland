@@ -1,0 +1,17 @@
+<div class="lang-form">
+	{% load i18n %}
+	<form action="{% url setlang %}" method="post">
+	<input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}" />
+	<input type="hidden" name="next" value="{{ next }}" />	
+	{{ form.language.label_tag }}:{{ form.language }}
+	
+	</form>
+
+	<script type="text/javascript">
+	$(function(){
+		$("#id_language").change(function(){
+			$(this).closest('form').submit();
+		});
+	});
+	</script>
+</div>

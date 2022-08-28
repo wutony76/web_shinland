@@ -1,0 +1,25 @@
+{% extends "admin/change_form.html" %}
+
+{% block extrahead %}
+{{ block.super }}
+<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}admin/css/album.css"/>
+
+{% endblock %}
+
+
+{% if adminform.form.instance.pk %}
+
+	{% block extra_related %}
+	
+	
+	{% if adminform.form.instance.id %}
+		<iframe id="upload" src="{% url album:upload adminform.form.instance.id %}"></iframe>
+
+	{% else %}
+	<div></div>
+	{% endif %}
+
+	{% endblock %}
+
+{% endif %}
+

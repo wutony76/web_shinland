@@ -1,0 +1,63 @@
+#upload {
+	width: 100%;
+	border: 0 none;
+	height: 90px;
+}
+
+#photo-changelist {
+	width: 100%;
+	border: 0 none;
+}
+
+.photo-post {
+	display: inline-block;
+	*display: inline;
+	vertical-align: top;
+	width: 150px;
+	height: 110px;
+	border: 1px dashed #ccc;
+	margin: .2em;
+}
+
+.photo-post:hover {
+	border: 1px dashed #000;
+}
+
+ul.uploadlist {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-size: .8em;
+}
+
+ul.uploadlist li {
+	padding: .3em;
+	background: #eee;
+	margin-bottom: 2px;	
+	color: #999;
+}
+
+ul.uploadlist .complete {
+	background: #ff7;
+	color: #000;
+}
+
+.inline-photo {
+	width: 200px;
+	height: 180px;
+	zoom: 1;
+	display: inline-block;
+	*display: inline;
+	vertical-align: top;
+	margin: 10px;
+	border: 1px dashed #666;
+	font-size: 13px;
+}
+
+.inline-photo:hover {
+	border: 1px dashed #000;
+}
+
+.inline-photo input[type=text] {
+	width: 150px;
+}

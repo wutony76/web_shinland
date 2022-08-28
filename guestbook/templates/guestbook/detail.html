@@ -1,0 +1,31 @@
+{% extends "base_site.html" %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/guestbook.css"/>
+{% endblock %}
+
+{% block content %}
+
+<div>
+<h2>{{ post.body }}</h2>
+<div>{{ post.pub_date|date:'Y.m.d' }}</div>
+</div>
+
+{% for reply in post.reply_set.all %}
+<div>
+	回覆:{{ reply.body }}
+	<div>{{ reply.pub_date|date:'Y.m.d' }}</div>
+</div>
+{% endfor %}
+
+<div>
+	<form action="{% url guestbook:post_reply post.id %}" method="post">
+		{% csrf_token %}
+		<textarea name="body"></textarea>
+		<div class="submit-row">
+		<input type="submit" value="回覆" />
+		</div>
+	</form>
+</div>
+
+{% endblock %}

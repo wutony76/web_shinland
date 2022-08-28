@@ -1,0 +1,15 @@
+{% extends "news/index.html" %}
+
+{% block main %}
+<div id="content-main">
+
+<h1>標題;{{news.title}}</h1><br/>
+<h2>分類;{{news.category.name}}</h2><br/>
+內容;<br/>
+<div>
+{{news.body}}
+</div>
+{{news.pub_date}}
+
+</div>
+{% endblock %}

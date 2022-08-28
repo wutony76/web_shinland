@@ -1,0 +1,75 @@
+{% extends "about/index.html" %}
+
+{% load i18n %}
+
+
+{% block extrastyle %}
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/jquery.lightbox-0.5.css" />
+{% endblock%}
+
+
+{% block bodyclass %}traffic{% endblock %}
+
+
+{% block sidebar %}
+<div id="sidebar">
+	<h3>地址</h3>
+	<p>大安區復興南路1段340巷24號
+	</p>
+	<h3>公車：</h3>
+	<p>204 / 226 / 278 / 278區 / 41 / 685
+	</p>
+	<h3>附近停車場：</h3>
+	<p>
+		<strong>台北福華大飯店-麗香苑  </strong>
+		106台北市大安區仁愛路三段160號
+		02-2700-2323
+	</p>
+	<p>
+		<strong>附中公園地下停車場  </strong>
+		106台北市大安區復興南路一段340巷11號B1樓
+		02-2701-4453
+	</p>
+	<p>
+		<strong>仁愛停車場</strong>
+		106台北市大安區仁愛路三段122之2號
+	</p>
+	
+	<p>
+		<strong>台北市農會收費停車場</strong>
+		106台北市大安區
+	</p>
+	
+</div>
+{% endblock %}
+
+{% block content-main %}
+
+
+	<div id="content-main-body">
+		<h1>交通資訊</h1>		
+		
+		<p class="intro">
+			
+			欣倫托兒所  位於大安區復興南路上，緊鄰捷運忠孝復興站及大安捷運站中間，優質的教育體系及教學環境外並重視品德及生活教育養成、美式教材豐富,重視托育安全及教學品質提升!
+		</p>
+	
+		<iframe width="560" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=zh-TW&amp;geocode=&amp;q=%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%AE%89%E5%8D%80%E5%BE%A9%E8%88%88%E5%8D%97%E8%B7%AF1%E6%AE%B5340%E5%B7%B724%E8%99%9F&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=35.821085,86.044922&amp;vpsrc=0&amp;ie=UTF8&amp;hq=&amp;hnear=106%E5%8F%B0%E7%81%A3%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%BE%A9%E8%88%88%E5%8D%97%E8%B7%AF%E4%B8%80%E6%AE%B5340%E5%B7%B724%E8%99%9F&amp;ll=25.039008,121.542525&amp;spn=0.010012,0.021007&amp;t=m&amp;z=14&amp;output=embed"></iframe></div>
+
+{% endblock %}
+
+{% block extrahead %}
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.lightbox-0.5.js"></script>
+<script type="text/javascript">
+$(function() {
+	$('a[rel*=lightbox]').lightBox({fixedNavigation:true});
+});
+</script>
+{% endblock %}
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+{% extends "base_site.html" %}
+
+{% load i18n profile_tags %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/profiles.css" />
+{% endblock%}
+
+{% block bodyclass %}profiles{% endblock %}
+
+{% block content %}
+
+<div class="content-main">
+{% userphoto user %}
+<a href="{% url profiles:photo_upload %}">{% trans 'upload your photo' %}</a>
+<div>
+	<form action="" method="post">{% csrf_token %}
+	{% for field in user_form %}
+	<div class="form-row">
+		{{ field.label_tag }}:
+		{{ field }}<span class="error">{{ filed.errors.as_text }}</span>
+	</div>
+	{% endfor %}
+	
+	{% for field in profile_form %}
+	<div class="form-row">
+		{{ field.label_tag }}:<span class="error">{{ filed.errors.as_text }}</span>
+		{{ field }}
+	</div>
+	{% endfor %}
+	
+	<div class="submit-row">
+		<input type="submit" value="{% trans 'Save' %}"/>
+	</div>
+	</form>
+	
+</div>
+</div>
+{% endblock %}

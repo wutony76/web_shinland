@@ -1,0 +1,13 @@
+
+#content {
+	padding: 30px 10px 10px 10px;
+}
+
+#content-main {
+	width: 500px;
+}
+
+#sidebar {
+	width: 320px;
+	float: right;
+}

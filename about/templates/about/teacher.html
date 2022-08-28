@@ -1,0 +1,24 @@
+{% extends "base_site.html" %}
+
+{% load i18n profile_tags %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/about.css" />
+
+{% endblock%}
+
+{% block bodyclass %}teacher{% endblock %}
+
+{% block content %}
+<div class="content-main">
+
+	{% userphoto profile %}
+	
+	<h2>{% fullname teacher %}</h2>
+	
+	<div class="about">
+		{{ about|safe }}
+	</div>
+
+</div>
+{% endblock %}

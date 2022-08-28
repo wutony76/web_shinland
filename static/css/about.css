@@ -1,0 +1,152 @@
+#content{
+	background:#7DCCF3;
+	box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2) inset;
+	border-top-left-radius: 32px;
+	border-top-right-radius: 32px;
+	
+	color:#fff;
+	font-weight:bold;
+	
+	position:relative;
+	min-height:745px;
+/*	background:#ccc;*/
+}
+
+.button-feature {
+	background: url('../images/sprites.png') no-repeat 0 -1100px;
+}
+.button-environ {
+	background: url('../images/sprites.png') no-repeat 0 -1000px;
+}
+.button-traffic {
+	background: url('../images/sprites.png') no-repeat 0 -900px;
+}
+
+#box1, #box2, #box3{
+	padding:10px 30px 20px 45px;
+	font-size:14px;
+	line-height:18px;
+}
+
+#box2{
+	background:#3399CC;
+}
+
+#box3 {
+	background:#7DCCF3;
+}
+
+
+.block1{
+	width:630px;
+}
+
+#sidebar {
+	width: 320px;
+	float: right;
+	margin: 135px 30px 0 0;
+}
+
+
+.about #content h1 {
+	height:40px;
+	margin: 0 0 30px 15px;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+.about #content {
+	padding: 30px 0px 15px 0px;
+}
+
+.about #content-main h1{
+	height:40px;
+	background:url('../images/titles.png')no-repeat 0 -325px;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+
+.about #content-main h3 {
+	height:20px;
+	margin:10px 0 10px 0;
+}
+
+.about #content-main ul{
+	padding-left:20px;
+}
+
+
+
+.environ #content h1 {
+	background:url('../images/titles.png')no-repeat 0 -145px;
+}
+
+.environ #sidebar {
+	width: 300px;
+	float: right;
+	margin: 160px 30px 0 0;
+	font-size:15px;
+	line-height:18px;
+}
+
+.environ #content-main-body,
+.traffic #content-main-body {
+	padding:20px 30px 20px 30px;
+}
+
+.environ #pic{
+	position: absolute;
+	right: 10px;
+	top: 320px;
+}
+
+.environ .photo-post {
+	width: 200px;
+	zoom: 1;
+	display: inline-block;
+	*display: inline;
+}
+
+.environ .photo-post .description {
+	font-size: 13px;
+}
+
+.about #pic{
+	position: absolute;
+	right: 10px;
+	top: 280px;
+	background:url('../images/about01.png') no-repeat;
+	width:429px;
+	height:375px;
+}
+
+.traffic #content-main {
+	width: 600px;
+	font-size: 13px;
+}
+
+.traffic .intro {
+	margin: 0 0 20px 0;
+}
+
+.traffic #content h1 {
+	background:url('../images/titles.png')no-repeat 0 -145px;
+}
+
+.traffic #sidebar h3 {
+	color: #ff7;
+	padding: 10px 0 10px 20px;
+	
+}
+
+.traffic #sidebar p {
+	border-top: 1px dashed #fff;
+	padding: 10px;
+	font-size: 13px;
+}
+
+.traffic #sidebar p strong {
+	display: block;
+	font-size: 15px;
+}

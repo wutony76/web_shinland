@@ -1,0 +1,17 @@
+{% extends "base_site.html" %}
+
+{% load i18n %}
+
+
+{% block bodyclass %}intro{% endblock %}
+
+{% block branding %}{% endblock %}
+{% block nav-global %}{% endblock %}
+{% block content %}
+<img src="{{ STATIC_URL }}images/intro.jpg" usemap="#go" />
+<map name="go">
+	<area shape="rect" coords="0,10,200,80" href="{% url home %}"></area>
+	<area shape="rect" coords="800,0,1200,100" href="{% url home %}"></area>
+</map>
+{% endblock %}
+

@@ -1,0 +1,95 @@
+{% extends "base_site.html" %}
+
+{% load i18n %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/home.css" />
+{% endblock%}
+
+{% block bodyclass %}home{% endblock %}
+
+{% block content %}
+	
+<ul class="content-menu">
+	<li><a class="button-news" href="{% url news:index %}">news</a> </li>
+	<li><a class="button-calendar" href="{% url calendar %}">calendar</a> </li>
+	<li><a class="button-album" href="{% url album:index %}">album</a> </li>
+</ul>
+	
+{% block main %}	
+<div id="sidebar">			
+	<div id="latest-news">
+		<h2>{% trans 'NEWS' %}</h2>
+		{% load latest_news %}{% latest_news %}
+	</div>			
+	<div id="latest-album">
+		<h2>{% trans 'Activity' %}</h2>
+			<div class="morelink"><a href="">{% trans 'more' %}</a>
+			</div>	
+			
+		{% load album_tags %}
+		{% for album in album_list %}
+		<div class="album-post">
+			{% url album:photo_list album.id as album_url %}
+				<div class="post"><a href="{{ album_url }}"> <img src="{% album_thumb_by_obj album 'icon_folder.png' %}"/></a>	</div>		
+				<div class="com"><li><a href="{{ album_url }}">{{ album.name }}</a></li></div>
+			</div>
+			{% endfor %}
+	</div>
+			
+</div>
+			
+<div id="content-main">		
+	
+	<div id="note">
+		<iframe id="note-like" src="https://www.facebook.com/plugins/like.php?href=www.bigplandesign.com/shinland/" scrolling="no" frameborder="0"></iframe>
+
+		{% for media in newsmedias %}
+		<div class="note-media" style="{% if not forloop.first %}display: none;{% endif %}">
+			<div class="note-body">
+			{% node_media media %}
+			</div>
+			<div id="note-links">
+				<a class="note-prev-link" href=""><img src="{{ STATIC_URL }}images/note_prev.png"/></a>
+				<a class="note-next-link" href=""><img src="{{ STATIC_URL }}images/note_next.png"/> </a>
+			</div>
+			<div class="note-description">{{ media.news.title }}</div>
+		</div>
+		{% endfor %}		
+				
+		
+	</div>
+</div>{% endblock %}
+{% endblock %}
+
+{% block extrahead %}
+<script type="text/javascript">
+$(function() {
+	var index = 0;
+	var len = $('.note-media').length;
+	$('.note-next-link').click(function(){
+		var target = $('.note-media')[index];
+		$(target).hide();		
+		index = (index+1) % len;
+		$($('.note-media')[index]).show();
+		//current = $(current).next();
+		
+		return false;
+	});
+	
+	$('.note-prev-link').click(function(){
+		var cur = index - 1;
+		if(cur < 0 ){
+			return false;
+		}
+		var target = $('.note-media')[index];
+		$(target).hide();		
+		$($('.note-media')[cur]).show();
+		index = cur;
+		//current = $(current).next();
+		
+		return false;
+	});
+});
+</script>
+{% endblock%}

@@ -1,0 +1,82 @@
+#content {
+	background: #6699ff;
+	box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2) inset;
+	border-top-left-radius: 32px;
+	border-top-right-radius: 32px;
+	position: relative;
+	height:600px;
+}
+.content-menu {
+	position: absolute;
+	right: 45px;
+	top: 25px;
+}
+.content-menu li {
+	list-style: none;
+	float: left;
+}
+.content-menu a {
+	display: block;
+	width: 100px;
+	height: 95px;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+
+
+#sidebar {
+	width: 320px;
+	float: right;
+	margin: 135px 30px 0 0;
+}
+
+#latest-news{
+	border-radius: 20px;
+	padding:20px 10px 5px 25px;
+	background:#fff;
+	font-size:18px;
+	color:#999;
+	width:280px;
+	height:400px;
+	position:relative;
+	z-index:9999;
+	margin-bottom:10px;
+}
+#latest-news h2{
+	width:200px;
+	position: absolute;
+	right: 125px;
+	top: -5px;
+	background:url('../images/sprites.png')no-repeat 0 -250px;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+
+#latest-news a{
+	text-decoration:none;
+	color:#999;
+}
+.date{
+	float:right;
+}
+
+#content-main h1{
+	position: absolute;
+	height:40px;
+	width:300px;
+	top:20px;
+	left:30px;
+	background:url('../images/titles.png')no-repeat 0 -7px;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+
+#content-main{
+	background:url('../images/home02.png') no-repeat;
+	width:580px;
+	height:500px;
+	padding:105px 0px 0px 95px;
+}

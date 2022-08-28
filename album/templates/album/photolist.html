@@ -1,0 +1,46 @@
+{% extends "album/index.html" %}
+
+{% load i18n pagination_tags %}
+
+{% block extrastyle %}
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/jquery.lightbox-0.5.css" />
+
+{% endblock%}
+
+{% block bodyclass %}album photolist{% endblock %}
+
+
+{% block main %}
+
+{% autopaginate photos 15 %}
+<div id="content-main">
+	<h2>{% trans 'Photo' %}</h2>
+	<div class="breadcrumbs">
+	<a href="{% url album:index %}">相簿</a>{{ album.name }}
+	</div>
+
+	<div id="photolist">
+	{% for photo in photos %}
+	<div class="photo-post">
+		<a href="{% url album:photo photo.id %}"><img src="{% url album:photo_thumb photo.id %}"/></a>
+		<div class="description">{{ photo.description }}</div>
+	</div>
+	{% endfor %}
+	</div>
+	
+	{% paginate %}
+	
+</div>
+
+
+{% endblock %}
+
+{% block extrahead %}
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.lightbox-0.5.js"></script>
+<script type="text/javascript">
+$(function() {
+	$('#photolist a').lightBox({fixedNavigation:true});
+});
+</script>
+{% endblock %}

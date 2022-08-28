@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/upload.css"/>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.6.2.js"></script>
+	<script type="text/javascript">
+	
+	function resize(){
+		$(parent.document).find("#upload").height($(document).height());
+	}
+	
+	$(function(){
+	
+		$("#button-upload").click(function(){
+			$(this).attr('disabled', true);
+			$(this).val('上傳中, 請稍後...');
+			upload_file();
+		});
+		
+		function upload_file(){		
+			var node = $("#file-container").children()[0];
+			if(!node){
+			
+				//var changelist = $(parent.document).find("#photo-changelist");
+				parent.location.reload();
+				/*
+				$(changelist).attr('src', $(changelist).attr('src'));
+				
+				$('#button-upload').attr('disabled', false);
+				$('#button-upload').val('上傳圖片');
+				*/
+				
+				return;
+			}
+			var file = $(node).data('file');
+			var form_data = new FormData();
+			form_data.append('photo', file);
+			$(node).find('.icon_loading').show();
+			$.ajax({
+				url: '{% url album:upload album.id %}',
+				type: 'POST',
+				data: form_data,
+				contentType: false,
+				processData: false,	
+				success: function(){
+					$(node).addClass('complete');
+					$(node).find('.icon_loading').hide();
+					$(node).find('.icon_complete').show();
+					$("#file-uploaded").append(node);					
+					upload_file();
+					resize()
+				},
+							
+			});
+		}
+		
+		function _file_select(evt){		
+			for(var i=0; f=evt.target.files[i]; i++){
+				var node = $('<li>' + f.name + ', ' + Math.round(f.size / 1024) + 'kb <img class="icon_loading" src="{{ STATIC_URL }}images/icon_loading.gif" style="display: none;"/> <img class="icon_complete" src="{{ STATIC_URL }}images/icon_complete.png" style="display: none;"/></li>');
+				
+				$(node).data('file', f);
+				$("#file-container").append(node);			
+			}
+
+			resize();
+		}	
+	
+		$("#file-select").bind('change', _file_select);
+	
+	//document.getElementById('file-select').addEventListener('change', _file_select, false);
+	});
+	</script>
+</head>
+<body>
+
+選擇多張圖片上載:
+<p><input id="file-select" type="file" name="photo" multiple /><input type="button" id="button-upload" value="開始上傳" /></p>
+
+
+	
+<ul class="uploadlist" id="file-container">
+		
+</ul>	
+<ul class="uploadlist" id="file-uploaded">
+		
+</ul>	
+</body>
+</html>

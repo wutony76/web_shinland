@@ -1,0 +1,56 @@
+{% extends "home.html" %}
+
+{% load i18n %}
+
+
+{% block bodyclass %}calendar{% endblock %}
+
+{% block main %}
+	
+	<div id="sidebar">
+	
+		<div class="guestbook">
+			<div><strong>我有話要說(不限會員)</strong></div>
+			<form action="{% url guestbook:post_add %}" method="post">
+				{% csrf_token %}
+			<textarea name="body"></textarea>
+			<div class="submit-row"><input type="submit" value="送出" /> </div>
+			</form>
+			<div><strong>歷史紀錄</strong></div>
+			{% for post in posts %}
+			<div class="post">
+				<div class="post-item">問:{{ post.body }}
+				<div class="post-date">{{ post.pub_date|date:'Y.m.d' }}</div>
+				</div>
+				{% for reply in post.reply_set.all %}
+				<div class="post-reply post-item">
+					<div>答:{{ reply.body }}</div>
+					<div class="post-date">{{ reply.pub_date|date:'Y.m.d' }}</div>
+				</div>
+				{% endfor %}
+				
+				{% if user.is_staff %}
+				<div class="post-replylink">
+				<a href="{% url guestbook:post_detail post.id %}">回覆</a> 
+				</div>
+				{% endif %}
+			</div>
+			{% endfor %}
+			
+			
+			<div><a href="{% url guestbook:index %}">更多</a> </div>
+		</div>
+
+	</div>
+	
+	<div id="content-main">
+		<h1>行事曆</h1>
+		<p>
+			如果看不到行事曆，請:<a class="downloadlink" href="">下載完整版行事曆</a>
+		</p>
+
+		<iframe src="https://www.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=6c9kd798dk4j9ge7rmlu0907b0%40group.calendar.google.com&amp;color=%23875509&amp;ctz=Asia%2FTaipei" style=" border-width:0 " width="760" height="600" frameborder="0" scrolling="no"></iframe>
+	</div>	
+	
+{% endblock %}
+

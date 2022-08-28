@@ -1,0 +1,38 @@
+{% extends "base_site.html" %}
+
+
+{% load i18n %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/about.css" />
+{% endblock%}
+
+{% block bodyclass %}about{% endblock %}
+
+{% block content %}
+<ul class="content-menu">
+	<li><a class="button-feature" href="{% url about:index %}">{% trans 'feature' %}</a> </li>
+	<li><a class="button-environ" href="{% url about:environ %}">{% trans 'environment' %}</a> </li>
+	<li><a class="button-traffic" href="{% url about:traffic %}">{% trans 'traffic' %}</a> </li>
+</ul>
+
+{% block main%}
+
+{% block sidebar %}{% endblock %}
+
+<div id="content-main">
+	
+	{% block content-main %}
+	<h1>辦學理念</h1>
+	{{ about.body|safe }}
+
+	<div id="pic">
+		
+	</div>
+	{% endblock %}
+</div>
+{% endblock %}
+{% endblock %}
+
+
+

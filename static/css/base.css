@@ -1,0 +1,299 @@
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	margin: 0;
+}
+
+#wrapper {
+	width: 1024px;
+	margin: 1em auto;
+	
+}
+
+#content {
+	width: 100%;
+	background: #BCD982;
+	box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2) inset;
+	border-top-left-radius: 32px;
+	border-top-right-radius: 32px;
+
+	position: relative;
+}
+
+/*HEADER*/
+
+#header {
+	position: relative;
+	height: 120px;
+}
+
+#branding {
+	float: left;
+}
+
+#site-name {
+	text-indent: -9999px;
+	background: url('../images/logo.png') no-repeat;
+	width: 300px;
+	height: 100px;
+	overflow: hidden;
+	display: block;
+	cursor: pointer;
+}
+
+#branding .branding-link {
+	display: block;
+	background:url('../images/titles.png')no-repeat 0 -560px;
+	width: 350px;
+	height: 50px;
+	position: absolute;
+	top: 0px;
+	left: 300px;
+}
+
+
+#navbar {
+	position: absolute;
+	bottom: 20px;
+	right: 0;
+	width: 250px;
+	font-size: 13px;
+}
+
+#navbar a.sign-up {
+	background: url('../images/sprites.png') no-repeat 0 -428px;
+	display: block;
+	width: 200px;
+	height: 32px;
+	text-indent: -9999px;
+	overflow: hidden;
+	
+}
+
+#navbar label {
+	color: #666;
+}
+
+#navbar .login-box .inputs {
+	float: left;
+	height: 50px;
+	width: 150px;
+}
+
+#navbar input[type="text"],
+#navbar input[type="password"] {
+	width: 100px;
+	border: 1px solid #999;
+	padding: 3px;
+}
+
+#navbar input[type="submit"] {
+	background: #ff7000;
+	border: 1px solid #333;
+	color: #fff;
+	padding: 3px 8px;
+}
+
+#menu {
+	height: 35px;
+	padding: 65px 0 0 0;
+}
+
+#menu ul li {
+	list-style: none;
+	float: left;
+}
+
+#menu ul li a {
+	background: url('../images/sprites.png') no-repeat;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+
+#menu a {
+	display: block;
+	width: 92px;
+	height: 30px;
+}
+
+#menu a.menu-home {
+	background-position: 0 -25px;
+}
+
+#menu a.menu-about {
+	background-position: 0 -56px;
+}
+
+#menu a.menu-course {
+	background-position: 0 -88px;
+}
+
+#menu a.menu-parentchild {
+	background-position: 0 -120px;
+}
+
+#menu a.menu-contact {
+	background-position: 0 -151px;
+}
+
+
+.content-menu {
+	position: absolute;
+	right: 45px;
+	top: 25px;
+}
+.content-menu li {
+	list-style: none;
+	float: left;
+}
+.content-menu a {
+	display: block;
+	width: 100px;
+	height: 95px;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+/*FOOTER*/
+
+#footer {
+	padding:5px;
+	text-align: center;
+	color: #999;
+	font-size: 13px;
+}
+
+/**/
+.searchbox {
+	margin-left:20px;
+	color:#fff;
+	font-weight:bold;
+	position: relative;
+}
+
+.searchbox input[type="text"] {
+	width: 100px;
+	border: 1px solid #999;
+	padding: 3px;
+}
+
+.searchbox input[type="submit"] {
+	border: none;
+	background:url('../images/sprites.png')no-repeat -7px 2px;
+	overflow: hidden;
+	text-indent: -9999px;
+	width:25px;
+	height:25px;
+}
+
+.breadcrumbs {
+	font-size: 13px;
+	color: #fff;
+	height: 30px;
+}
+
+.breadcrumbs a {
+	color: #fff;
+	text-decoration: none;
+	margin: 3px 8px;
+}
+
+.breadcrumbs a:after {
+	content: '>';
+	margin: 0 0 0 8px;
+}
+/* PAGINATION */
+
+.pagination {
+	font-size: 13px;	
+}
+
+.pagination a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.pagination a:hover {
+	text-decoration: underline;
+}
+
+.pagination .current{
+	font-size: 15px;	
+}
+
+
+/* BUTTONS */
+
+.button-news {
+	background: url('../images/sprites.png') no-repeat 0 -600px;
+}
+.button-album {
+	background: url('../images/sprites.png') no-repeat 0 -700px;
+}
+.button-calendar {
+	background: url('../images/sprites.png') no-repeat 0 -800px;
+}
+.button-traffic {
+	background: url('../images/sprites.png') no-repeat 0 -900px;
+}
+.button-environ {
+	background: url('../images/sprites.png') no-repeat 0 -1000px;
+}
+.button-feature {
+	background: url('../images/sprites.png') no-repeat 0 -1100px;
+}
+.button-teacher {
+	background: url('../images/sprites.png') no-repeat 0 -1200px;
+}
+.button-course {
+	background: url('../images/sprites.png') no-repeat 0 -1300px;
+}
+.button-video {
+	background: url('../images/sprites.png') no-repeat 0 -1400px;
+}
+.button-download {
+	background: url('../images/sprites.png') no-repeat 0 -1500px;
+}
+.button-share {
+	background: url('../images/sprites.png') no-repeat 0 -1600px;
+}
+.button-signup {
+	background: url('../images/sprites.png') no-repeat 0 -1700px;
+}
+.button-email {
+	background: url('../images/sprites.png') no-repeat 0 -1800px;
+}
+.button-service {
+	background: url('../images/sprites.png') no-repeat 0 -1900px;
+}
+/* INTRO */
+
+
+.intro #header {
+	height: 0px;
+}
+
+.intro #content {
+	height: 640px;
+	box-shadow: none;
+	border-radius: 0px;
+}
+
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+

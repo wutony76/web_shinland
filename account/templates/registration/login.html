@@ -1,0 +1,69 @@
+{% extends "base_site.html" %}
+
+{% load i18n %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/login.css" />
+
+{% endblock%}
+
+
+{% block content %}
+
+<div id="sidebar">
+		<div class="sign-in">
+		<h2>{% trans 'Sign in' %}</h2>{% url auth_login as login_url %}
+		<form action="{{ login_url }}" method="post">
+			{% csrf_token %}
+			
+			
+			{% for field in form %}
+			<div class="form-row">				
+			{{ field.label_tag }}
+			</div>
+			<div class="form-row">
+			{% if user.is_authenticated and field.name == 'username' %}
+				{{ user.username }}<input type="hidden" name="username" value="{{ user.username }}" />
+			{% else %}
+				{{ field }}
+			{% endif %}
+			</div>
+			{% endfor %}
+			
+			{% if form.errors %}
+			<span class="error">{% trans 'The username or password you entered is incorrect.' %}</span>		
+			{% endif %}
+			<div class="form-row">
+			{{ form.remember }}{{ form.remember.label_tag }}
+			</div>
+			<div class="submit-row">
+			<input type="submit" value="{% trans 'Sign in' %}"/>
+			</div>
+			<input type="hidden" name="next" value="{% if request.path_info == login_url %}{% url auth_index %}{% else %}{{ request.get_full_path }}{% endif %}" />
+		</form>
+		
+		<ul>
+			<li><a href="" >{% trans "Can't access your account?" %}</a></li>
+		</ul>
+		
+	</div>
+	
+</div>
+
+<div id="content-main">
+	
+	<h1>{% trans 'Accounts' %}</h1>
+	<p>
+	{% trans 'Sign in on the right or' %}
+	<a href="{% url auth_signup %}">{% trans 'create an account.' %}</a>
+	</p>
+
+</div>
+
+
+<script type="text/javascript">
+document.getElementById('id_username').focus()
+</script>
+
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base_site.html" %}
+
+{% load i18n %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/account.css" />
+{% endblock%}
+
+{% block content %}
+
+<div class="content-main">
+{% load profile_tags %}	
+<div>
+	<h2>{% trans 'Profile' %}</h2>
+	<div class="info">
+	<p>{% userphoto user %}
+		<a href="{% url profiles:profile_change %}">{% trans 'edit your personal info' %}</a>
+	</p>
+	</div>
+</div>
+
+<div class="settings">
+	<h2>{% trans 'Settings' %}</h2>
+	<p>
+	<label>{% trans 'Password' %}</label>
+	<a class="editlink" href="{% url password_change %}">{% trans 'Changeing your password' %}</a>
+	</p>
+	<p>
+	<label>{% trans 'Eamil address' %}</label>
+	{{ user.email }}<a class="editlink" href="">{% trans 'Edit' %}</a>
+	</p>
+</div>
+
+</div>
+{% endblock %}

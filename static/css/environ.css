@@ -1,0 +1,39 @@
+#content{
+	background:#7DCCF3;
+	box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2) inset;
+	border-top-left-radius: 32px;
+	border-top-right-radius: 32px;
+	
+	color:#fff;
+	font-weight:bold;
+	
+	position:relative;
+	min-height:700px;
+/*	background:#ccc;*/
+}
+
+
+
+#sidebar {
+	width: 300px;
+	float: right;
+	margin: 160px 30px 0 0;
+	font-size:15px;
+	line-height:18px;
+}
+#content-main-body{
+	padding:20px 30px 20px 30px;
+}
+#content-main h1{
+	height:40px;
+	margin: 0 0 30px 0;
+	background:url('../images/titles.png')no-repeat 0 -55px;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+#content-main #pic{
+	position: absolute;
+	right: 10px;
+	top: 320px;
+}

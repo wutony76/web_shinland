@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="{{ LANGUAGE_CODE|default:"zh-tw" }}" xml:lang="{{ LANGUAGE_CODE|default:"zh-tw" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+<head>
+	<meta charset="utf-8">
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{{ STATIC_URL }}css/base.css{% endblock %}" />
+	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/navbar.css" />	
+	{% block extrastyle %}{% endblock %}
+	<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/ie6.css" /><![endif]-->
+	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.curvycorners.min.js"></script>
+	{% block extrahead %}{% endblock %}
+	{% block iefix %}{% endblock %}
+</head>
+<body class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}">
+
+<div id="wrapper">	
+	
+	<div id="header">
+		<div id="branding">
+		{% block branding %}{% endblock %}
+		</div>
+		{% block nav-global %}{% endblock %}
+	</div>
+	
+	<div id="content" class="clearfix">
+	{% block content %}			
+		{% block sidebar %}{% endblock %}
+		{% block main %}{% endblock %}
+	{% endblock %}
+	</div> 
+	
+	{% block footer %}<div id="footer"></div>{% endblock %}
+	
+</div>	
+</body>
+</html>

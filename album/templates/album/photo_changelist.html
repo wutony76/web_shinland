@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}admin/css/album.css"/>
+	<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}admin/css/jquery.lightbox-0.5.css"/>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.6.2.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.lightbox-0.5.js"></script>	
+	<script type="text/javascript">
+	$(function(){
+		$(parent.document).find("#photo-changelist").height($(document).height());
+		
+
+		
+		$('a[rel*=box]').lightBox({fixedNavigation:true});
+	});
+	</script>
+</head>
+<body>
+{% for photo in object_list %}
+<div class="photo-post">
+<a rel="box" href="{% url album:photo_change photo.id %}">
+<img src="{% url album:photo_thumb photo.id %}"/></a>
+</div>
+{% endfor %}
+</body>
+</html>

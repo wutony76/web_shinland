@@ -1,0 +1,35 @@
+{% extends "base_site.html" %}
+
+
+{% load i18n %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/share.css" />
+{% endblock%}
+
+{% block bodyclass %}video{% endblock %}
+
+{% block content %}
+
+<ul class="content-menu">
+	<li><a class="button-video" href="{% url share:index %}">及時視訊</a> </li>
+	<li><a class="button-download" href="{% url share:download_list %}">{% trans 'download' %}</a> </li>
+	<li><a class="button-share" href="{% url share:article_index %}">親子分享</a> </li>
+	<li><a class="button-signup" href="{% url about:traffic %}">家長報名</a> </li>
+</ul>
+{% block sidebar %}{% endblock %}
+
+<div id="content-main">
+	{% block content-main %}
+	<h1>及時觀摩</h1>
+	<p class="intro">
+	家長可透過即時影像傳輸功能，了解寶貝在學校的生活點滴。遇戶外教學日上午不開放視訊喔！聯絡電話：(02) 2701-3880</p>
+	
+	<iframe id="video" src="http://210.61.48.8"></iframe>
+	{% endblock %}
+</div>
+
+{% endblock %}
+
+
+
